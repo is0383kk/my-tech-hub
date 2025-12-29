@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="技術情報の自動収集ツール - 最新の技術記事を一覧できます">
+  <title>My-feed-hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="site-title">My-feed-hub</h1>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <!-- カテゴリタブ -->
+      <nav class="category-tabs" id="categoryTabs">
+        <!-- JavaScriptで動的に生成 -->
+      </nav>
+
+      <!-- 記事一覧 -->
+      <section class="articles-section">
+        <div class="articles-header">
+          <h2 id="categoryTitle">記事一覧</h2>
+          <p class="articles-count" id="articlesCount">読み込み中...</p>
+        </div>
+
+        <div class="articles-list" id="articlesList">
+          <p class="loading">記事を読み込んでいます...</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 TechFeed. 最終更新: <span id="lastUpdated">-</span></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

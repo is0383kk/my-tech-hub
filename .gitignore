@@ -146,5 +146,13 @@ cython_debug/
 .DS_Store
 Thumbs.db
 
-# Project specific
-# data/posted_urls.json は GitHub Actions が自動コミットするため除外しない
+# Node.js
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# CLAUDE
+CLAUDE.md
+prompt.txt

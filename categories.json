@@ -1,0 +1,16 @@
+{
+  "categories": [
+    {
+      "name": "一般",
+      "id": "tech_general",
+      "feedUrl": "https://www.publickey1.jp/atom.xml",
+      "webhookEnvKey": "DISCORD_WEBHOOK_TECH_GENERAL"
+    },
+    {
+      "name": "AWS",
+      "id": "aws",
+      "feedUrl": "https://aws.amazon.com/jp/about-aws/whats-new/recent/feed/",
+      "webhookEnvKey": "DISCORD_WEBHOOK_AWS"
+    }
+  ]
+}
