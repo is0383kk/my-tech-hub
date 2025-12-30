@@ -1,8 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-const HISTORY_DIR = 'docs/data';
-const HISTORY_FILE = path.join(HISTORY_DIR, 'post-history.json');
+const HISTORY_FILE = 'post-history.json';
 
 /**
  * 投稿履歴を読み込む
@@ -20,20 +19,22 @@ export async function loadHistory() {
 }
 
 /**
- * 投稿履歴を保存する
+ * 投稿履歴を保存する（90日以内の記事のみ保持）
  * @param {Set} postedIds - 投稿済みの記事IDのセット
+ * @param {Set} validIds - 有効な記事IDのセット（90日以内の記事）
  */
-export async function saveHistory(postedIds) {
+export async function saveHistory(postedIds, validIds) {
   try {
-    // ディレクトリが存在しない場合は作成
-    await fs.mkdir(HISTORY_DIR, { recursive: true });
+    // validIds に存在する ID のみを保持（90日以内の記事のみ）
+    const filteredIds = Array.from(postedIds).filter(id => validIds.has(id));
 
     const history = {
-      postedIds: Array.from(postedIds),
+      postedIds: filteredIds,
       lastUpdated: new Date().toISOString(),
     };
 
     await fs.writeFile(HISTORY_FILE, JSON.stringify(history, null, 2), 'utf-8');
+    console.log(`投稿履歴を保存しました（${filteredIds.length}件）`);
   } catch (error) {
     console.error('投稿履歴の保存に失敗しました:', error);
     throw error;

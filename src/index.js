@@ -1,11 +1,11 @@
 import 'dotenv/config';
 import fs from 'fs/promises';
-import { addArticlesToCategory, generateIndex } from './dataManager.js';
+import { addArticlesToCategory, generateIndex, getAllArticleIds } from './dataManager.js';
 import { postMultipleArticles } from './discordPoster.js';
 import { collectFeed } from './feedCollector.js';
 import { addToHistory, filterNewArticles, loadHistory, saveHistory } from './historyManager.js';
 
-const FILTER_DAYS = 10; // 初回実行時に遡る日数
+const FILTER_DAYS = 30; // 初回実行時に遡る日数
 
 /**
  * メイン処理
@@ -84,8 +84,9 @@ async function main() {
       }
     }
 
-    // 投稿履歴を保存
-    await saveHistory(postedIds);
+    // 投稿履歴を保存（90日以内の記事のみ）
+    const validIds = await getAllArticleIds(categories);
+    await saveHistory(postedIds, validIds);
 
     // インデックスファイルを生成（GitHub Pages用）
     await generateIndex(categories);

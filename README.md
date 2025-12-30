@@ -9,7 +9,38 @@
 - 90 日間のデータ保持（古いデータは自動削除）
 - （オプション）Discord Hook 機能を使って Discord チャンネルに投稿することも可能です
 
-## ２．セットアップ
+## ２．ディレクトリ構造
+
+```
+my-feed-hub/
+├── .github/
+│   └── workflows/
+│       └── collect.yml          # GitHub Actions ワークフロー（3時間ごとに実行）
+├── docs/                         # GitHub Pages 公開ディレクトリ
+│   ├── data/                     # 記事データ（90日間保持、自動更新）
+│   │   ├── {categoryId}.json   # カテゴリ別記事データ
+│   │   └── index.json           # カテゴリ一覧インデックス
+│   ├── index.html               # メインページ
+│   ├── app.js                   # フロントエンドロジック
+│   └── style.css                # スタイルシート
+├── src/                         # バックエンドソースコード
+│   ├── index.js                 # メイン処理（オーケストレーション）
+│   ├── feedCollector.js         # RSS収集
+│   ├── dataManager.js           # データ管理（90日保持ポリシー）
+│   ├── historyManager.js        # 投稿履歴管理（重複投稿防止）
+│   └── discordPoster.js         # Discord通知
+├── categories.json              # カテゴリ・RSSフィード設定
+├── post-history.json            # Discord投稿履歴（90日間保持、リポジトリ管理）
+├── server.js                    # ローカルプレビューサーバー
+└── package.json                 # npm設定・依存関係
+```
+
+**重要なポイント:**
+- `docs/` 配下のみが GitHub Pages で公開されます
+- `post-history.json` はプロジェクト直下に配置され、GitHub Pages では公開されません
+- 記事データと投稿履歴は両方とも90日間のみ保持され、リポジトリ肥大化を防ぎます
+
+## ３．セットアップ
 
 ### ■ 本リポジトリをクローン
 
@@ -70,10 +101,10 @@ env:
 
 ### ■ リポジトリを更新し、ワークフローを実行する
 
-リポジトリを更新し **Actions > feed-collector-and-poster > Run workflow** でワークフローを実行します。  
+リポジトリを更新し **Actions > feed-collector-and-poster > Run workflow** でワークフローを実行します。
 その後、デプロイされた WEB ページを確認します。
 
-## ３．ローカル環境下での動作確認
+## ４．ローカル環境下での動作確認
 
 ### ■ 依存関係のインストール
 
@@ -83,8 +114,8 @@ npm install
 
 ### ■ 技術情報の収集と投稿
 
-ローカルで実行して動作確認する場合は下記コマンドを実行します  
-`data`配下に収集結果が格納されます
+ローカルで実行して動作確認する場合は下記コマンドを実行します
+`docs/data`配下に収集結果が格納されます
 
 ```bash
 npm start
@@ -102,7 +133,7 @@ npm run preview
 
 **注意:** 直接 `docs/index.html` をブラウザで開くと CORS エラーが発生するため、必ずローカルサーバーを使用してください。
 
-## ４．その他
+## ５．その他
 
 ### ■ 実行間隔の変更
 
@@ -130,5 +161,5 @@ const RETENTION_DAYS = 90; // 日数を変更
 初回実行時の投稿数を変更する場合は `src\index.js` の定数を変更します。
 
 ```javascript
-const FILTER_DAYS = 10; // 初回実行時に遡る日数
+const FILTER_DAYS = 30; // 初回実行時に遡る日数
 ```

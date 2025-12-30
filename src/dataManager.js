@@ -106,6 +106,24 @@ function filterOldArticles(articles) {
 }
 
 /**
+ * 全カテゴリの記事IDを取得（90日以内の記事のみ）
+ * @param {Array} categories - カテゴリ情報の配列
+ * @returns {Promise<Set>} 全記事IDのセット
+ */
+export async function getAllArticleIds(categories) {
+  const allIds = new Set();
+
+  for (const category of categories) {
+    const articles = await loadCategoryData(category.id);
+    articles.forEach(article => {
+      allIds.add(article.id);
+    });
+  }
+
+  return allIds;
+}
+
+/**
  * 全カテゴリのデータをまとめたインデックスファイルを生成
  * @param {Array} categories - カテゴリ情報の配列
  */
