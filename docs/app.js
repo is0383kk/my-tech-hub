@@ -93,6 +93,9 @@ async function init() {
 
     // 検索機能のイベントリスナーを設定
     setupSearchListeners();
+
+    // トップに戻るボタンを初期化
+    initScrollToTop();
   } catch (error) {
     console.error('初期化エラー:', error);
     showError('データの読み込みに失敗しました');
@@ -508,6 +511,51 @@ function renderSearchResults(results) {
     const card = createArticleCard(article, true);
     articlesListEl.appendChild(card);
   });
+}
+
+// トップに戻るボタンの初期化
+function initScrollToTop() {
+  const scrollToTopBtn = document.getElementById('scrollToTop');
+
+  if (!scrollToTopBtn) {
+    console.warn('トップに戻るボタンが見つかりません');
+    return;
+  }
+
+  // スクロールイベントを監視
+  let lastScrollTop = 0;
+  let ticking = false;
+
+  window.addEventListener('scroll', () => {
+    lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleScrollToTopButton(scrollToTopBtn, lastScrollTop);
+        ticking = false;
+      });
+
+      ticking = true;
+    }
+  });
+
+  // ボタンクリック時にトップまでスムーズスクロール
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+// ボタンの表示/非表示を切り替え
+function toggleScrollToTopButton(button, scrollTop) {
+  // 300px以上スクロールしたらボタンを表示
+  if (scrollTop > 300) {
+    button.classList.add('visible');
+  } else {
+    button.classList.remove('visible');
+  }
 }
 
 // ページ読み込み時に初期化

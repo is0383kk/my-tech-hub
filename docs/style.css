@@ -344,6 +344,45 @@ body {
   color: #ecf0f1;
 }
 
+/* トップに戻るボタン */
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  background-color: var(--accent-color-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-to-top:active {
+  transform: translateY(-2px);
+}
+
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
   .site-title {
@@ -412,5 +451,17 @@ body {
   .article-meta {
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  .scroll-to-top {
+    width: 44px;
+    height: 44px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .scroll-to-top svg {
+    width: 20px;
+    height: 20px;
   }
 }
