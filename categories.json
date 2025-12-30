@@ -1,22 +1,32 @@
 {
   "categories": [
     {
-      "name": "一般",
-      "id": "tech_general",
+      "name": "publickey",
+      "id": "publickey",
       "feedUrl": "https://www.publickey1.jp/atom.xml",
-      "webhookEnvKey": "DISCORD_WEBHOOK_TECH_GENERAL"
+      "webhookEnvKey": "DISCORD_WEBHOOK_TECH_GENERAL",
+      "siteName": "Publickey"
+    },
+    {
+      "name": "Developers.IO",
+      "id": "developers_io",
+      "feedUrl": "https://dev.classmethod.jp/feed/",
+      "webhookEnvKey": "DISCORD_WEBHOOK_GENERAL",
+      "siteName": "Developers.IO"
     },
     {
       "name": "AWS",
       "id": "aws",
       "feedUrl": "https://aws.amazon.com/jp/about-aws/whats-new/recent/feed/",
-      "webhookEnvKey": "DISCORD_WEBHOOK_AWS"
+      "webhookEnvKey": "DISCORD_WEBHOOK_AWS",
+      "siteName": "AWS What's New"
     },
     {
       "name": "ゲーム",
       "id": "game",
       "feedUrl": "https://automaton-media.com/feed/",
-      "webhookEnvKey": ""
+      "webhookEnvKey": "",
+      "siteName": "AUTOMATON"
     }
   ]
 }
