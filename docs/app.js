@@ -12,7 +12,7 @@ function initTheme() {
   const moonIcon = document.querySelector('.moon-icon');
 
   if (!themeToggle || !sunIcon || !moonIcon) {
-    console.warn('テーマ切り替え要素が見つかりません');
+    console.warn('Theme toggle elements not found');
     return;
   }
 
@@ -70,7 +70,7 @@ async function init() {
     // インデックスファイルを読み込む
     const indexResponse = await fetch('./data/index.json');
     if (!indexResponse.ok) {
-      throw new Error('インデックスファイルの読み込みに失敗しました');
+      throw new Error('Failed to load index file');
     }
 
     const indexData = await indexResponse.json();
@@ -108,7 +108,7 @@ async function init() {
     // トップに戻るボタンを初期化
     initScrollToTop();
   } catch (error) {
-    console.error('初期化エラー:', error);
+    console.error('Initialization error:', error);
     showError('Loading failed');
   }
 }
@@ -175,7 +175,7 @@ async function selectCategory(categoryIds) {
 // 記事を読み込んで表示（単一カテゴリ用）
 async function loadAndRenderArticles(categoryId, dataFile) {
   const articlesListEl = document.getElementById('articlesList');
-  articlesListEl.innerHTML = '<p class="loading">記事を読み込んでいます...</p>';
+  articlesListEl.innerHTML = '<p class="loading">Loading articles...</p>';
 
   try {
     // キャッシュをチェック
@@ -200,15 +200,15 @@ async function loadAndRenderArticles(categoryId, dataFile) {
     // 記事を表示
     renderArticles(articles);
   } catch (error) {
-    console.error('記事の読み込みエラー:', error);
-    showError('記事の読み込みに失敗しました');
+    console.error('Article loading error:', error);
+    showError('Failed to load articles');
   }
 }
 
 // 複数カテゴリの記事を読み込んで表示
 async function loadAndRenderMultipleCategories(categoryIds, categories) {
   const articlesListEl = document.getElementById('articlesList');
-  articlesListEl.innerHTML = '<p class="loading">記事を読み込んでいます...</p>';
+  articlesListEl.innerHTML = '<p class="loading">Loading articles...</p>';
 
   try {
     // 各カテゴリのデータを読み込み
@@ -222,7 +222,7 @@ async function loadAndRenderMultipleCategories(categoryIds, categories) {
       if (!articlesData[categoryId]) {
         const response = await fetch(`./data/${category.dataFile}`);
         if (!response.ok) {
-          console.error(`カテゴリ ${categoryId} の読み込みに失敗しました`);
+          console.error(`Failed to load category ${categoryId}`);
           continue;
         }
 
@@ -246,8 +246,8 @@ async function loadAndRenderMultipleCategories(categoryIds, categories) {
     // 記事を表示
     renderArticles(allArticles);
   } catch (error) {
-    console.error('記事の読み込みエラー:', error);
-    showError('記事の読み込みに失敗しました');
+    console.error('Article failed to load:', error);
+    showError('Article failed to load');
   }
 }
 
@@ -256,7 +256,7 @@ function renderArticles(articles) {
   const articlesListEl = document.getElementById('articlesList');
 
   if (articles.length === 0) {
-    articlesListEl.innerHTML = '<p class="no-articles">記事がありません</p>';
+    articlesListEl.innerHTML = '<p class="no-articles">No articles</p>';
     return;
   }
 
@@ -514,7 +514,7 @@ async function loadAllCategories() {
           articlesData[category.id] = data.articles || [];
         }
       } catch (error) {
-        console.error(`カテゴリ ${category.id} の読み込みエラー:`, error);
+        console.error(`Category ${category.id} loading error:`, error);
       }
     }
   });
@@ -525,7 +525,7 @@ async function loadAllCategories() {
 // 検索を実行
 async function performSearch(keyword) {
   const articlesListEl = document.getElementById('articlesList');
-  articlesListEl.innerHTML = '<p class="loading">検索しています...</p>';
+  articlesListEl.innerHTML = '<p class="loading">Searching...</p>';
 
   try {
     // 全カテゴリのデータを読み込む
@@ -543,8 +543,8 @@ async function performSearch(keyword) {
     // 検索結果を表示
     renderSearchResults(results);
   } catch (error) {
-    console.error('検索エラー:', error);
-    showError('検索に失敗しました');
+    console.error('Search error:', error);
+    showError('Search failed');
   }
 }
 
@@ -583,7 +583,7 @@ function renderSearchResults(results) {
   const articlesListEl = document.getElementById('articlesList');
 
   if (results.length === 0) {
-    articlesListEl.innerHTML = '<p class="no-articles">検索結果が見つかりませんでした</p>';
+    articlesListEl.innerHTML = '<p class="no-articles">No search results found</p>';
     return;
   }
 
@@ -600,7 +600,7 @@ function initScrollToTop() {
   const scrollToTopBtn = document.getElementById('scrollToTop');
 
   if (!scrollToTopBtn) {
-    console.warn('トップに戻るボタンが見つかりません');
+    console.warn('Scroll to top button not found');
     return;
   }
 
