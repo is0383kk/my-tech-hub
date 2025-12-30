@@ -86,9 +86,20 @@ async function init() {
     // カテゴリタブを生成
     renderCategoryTabs();
 
-    // 最初のカテゴリを選択
+    // 最初のカテゴリグループを選択
     if (categoriesData.length > 0) {
-      selectCategory(categoriesData[0].id);
+      // カテゴリ名でグループ化して最初のグループのIDsを取得
+      const groupedCategories = {};
+      categoriesData.forEach(category => {
+        if (!groupedCategories[category.name]) {
+          groupedCategories[category.name] = {
+            ids: []
+          };
+        }
+        groupedCategories[category.name].ids.push(category.id);
+      });
+      const firstGroupIds = Object.values(groupedCategories)[0].ids;
+      selectCategory(firstGroupIds);
     }
 
     // 検索機能のイベントリスナーを設定
@@ -102,28 +113,51 @@ async function init() {
   }
 }
 
-// カテゴリタブを生成
+// カテゴリタブを生成（同じカテゴリ名をグループ化）
 function renderCategoryTabs() {
   const tabsContainer = document.getElementById('categoryTabs');
   tabsContainer.innerHTML = '';
 
+  // カテゴリ名でグループ化
+  const groupedCategories = {};
   categoriesData.forEach(category => {
+    if (!groupedCategories[category.name]) {
+      groupedCategories[category.name] = {
+        name: category.name,
+        ids: [],
+        totalArticleCount: 0
+      };
+    }
+    groupedCategories[category.name].ids.push(category.id);
+    groupedCategories[category.name].totalArticleCount += category.articleCount;
+  });
+
+  // グループ化されたカテゴリでタブを生成
+  Object.values(groupedCategories).forEach(group => {
     const tab = document.createElement('button');
     tab.className = 'category-tab';
-    tab.textContent = `${category.name} (${category.articleCount})`;
-    tab.onclick = () => selectCategory(category.id);
-    tab.dataset.categoryId = category.id;
+    tab.textContent = `${group.name} (${group.totalArticleCount})`;
+    tab.onclick = () => selectCategory(group.ids);
+    tab.dataset.categoryIds = JSON.stringify(group.ids);
     tabsContainer.appendChild(tab);
   });
 }
 
-// カテゴリを選択
-async function selectCategory(categoryId) {
-  currentCategory = categoryId;
+// カテゴリを選択（複数IDに対応）
+async function selectCategory(categoryIds) {
+  // 配列でない場合は配列化（後方互換性のため）
+  if (!Array.isArray(categoryIds)) {
+    categoryIds = [categoryIds];
+  }
+
+  currentCategory = categoryIds;
 
   // タブのアクティブ状態を更新
   document.querySelectorAll('.category-tab').forEach(tab => {
-    if (tab.dataset.categoryId === categoryId) {
+    const tabIds = JSON.parse(tab.dataset.categoryIds);
+    // 配列の内容が同じかチェック
+    const isActive = JSON.stringify(tabIds.sort()) === JSON.stringify([...categoryIds].sort());
+    if (isActive) {
       tab.classList.add('active');
     } else {
       tab.classList.remove('active');
@@ -131,14 +165,14 @@ async function selectCategory(categoryId) {
   });
 
   // カテゴリ情報を取得
-  const category = categoriesData.find(cat => cat.id === categoryId);
-  if (!category) return;
+  const categories = categoriesData.filter(cat => categoryIds.includes(cat.id));
+  if (categories.length === 0) return;
 
-  // 記事を読み込んで表示
-  await loadAndRenderArticles(categoryId, category.dataFile);
+  // 複数カテゴリの記事を読み込んで表示
+  await loadAndRenderMultipleCategories(categoryIds, categories);
 }
 
-// 記事を読み込んで表示
+// 記事を読み込んで表示（単一カテゴリ用）
 async function loadAndRenderArticles(categoryId, dataFile) {
   const articlesListEl = document.getElementById('articlesList');
   articlesListEl.innerHTML = '<p class="loading">記事を読み込んでいます...</p>';
@@ -165,6 +199,52 @@ async function loadAndRenderArticles(categoryId, dataFile) {
 
     // 記事を表示
     renderArticles(articles);
+  } catch (error) {
+    console.error('記事の読み込みエラー:', error);
+    showError('記事の読み込みに失敗しました');
+  }
+}
+
+// 複数カテゴリの記事を読み込んで表示
+async function loadAndRenderMultipleCategories(categoryIds, categories) {
+  const articlesListEl = document.getElementById('articlesList');
+  articlesListEl.innerHTML = '<p class="loading">記事を読み込んでいます...</p>';
+
+  try {
+    // 各カテゴリのデータを読み込み
+    const allArticles = [];
+
+    for (const categoryId of categoryIds) {
+      const category = categories.find(cat => cat.id === categoryId);
+      if (!category) continue;
+
+      // キャッシュをチェック
+      if (!articlesData[categoryId]) {
+        const response = await fetch(`./data/${category.dataFile}`);
+        if (!response.ok) {
+          console.error(`カテゴリ ${categoryId} の読み込みに失敗しました`);
+          continue;
+        }
+
+        const data = await response.json();
+        articlesData[categoryId] = data.articles || [];
+      }
+
+      // 記事を追加
+      allArticles.push(...articlesData[categoryId]);
+    }
+
+    // 日付の降順でソート
+    allArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+
+    // 記事数を更新
+    const countEl = document.getElementById('articlesCount');
+    if (countEl) {
+      countEl.textContent = `${allArticles.length} Articles`;
+    }
+
+    // 記事を表示
+    renderArticles(allArticles);
   } catch (error) {
     console.error('記事の読み込みエラー:', error);
     showError('記事の読み込みに失敗しました');
@@ -223,11 +303,20 @@ function createArticleCard(article, showCategory = false) {
   const minutes = String(date.getMinutes()).padStart(2, '0');
   const dateStr = `${year}-${month}-${day} ${hours}:${minutes}`;
 
-  let metaHtml = `<span>${dateStr}</span>`;
+  let metaHtml = '';
 
-  // 検索結果の場合はカテゴリバッジを表示
+  // サイト名と日付を1つのspanにまとめて表示
+  let dateTimeText = '';
+  if (article.siteName) {
+    dateTimeText = `【${escapeHtml(article.siteName)}】${dateStr}`;
+  } else {
+    dateTimeText = dateStr;
+  }
+  metaHtml += `<span>${dateTimeText}</span>`;
+
+  // 検索結果の場合はカテゴリバッジも表示
   if (showCategory && article.categoryName) {
-    metaHtml += ` <span class="category-badge">${escapeHtml(article.categoryName)}</span>`;
+    metaHtml += `<span class="category-badge">${escapeHtml(article.categoryName)}</span>`;
   }
 
   meta.innerHTML = metaHtml;
