@@ -142,9 +142,15 @@ function createArticleCard(article, showCategory = false) {
 
   const link = document.createElement('a');
   link.href = article.link;
-  link.textContent = article.title;
   link.target = '_blank';
   link.rel = 'noopener noreferrer';
+
+  // 検索モードの場合はタイトルをハイライト
+  if (showCategory && searchKeyword) {
+    link.innerHTML = highlightKeyword(article.title, searchKeyword);
+  } else {
+    link.textContent = article.title;
+  }
 
   title.appendChild(link);
   card.appendChild(title);
@@ -164,7 +170,7 @@ function createArticleCard(article, showCategory = false) {
 
   // 検索結果の場合はカテゴリバッジを表示
   if (showCategory && article.categoryName) {
-    metaHtml += ` <span class="category-badge">${article.categoryName}</span>`;
+    metaHtml += ` <span class="category-badge">${escapeHtml(article.categoryName)}</span>`;
   }
 
   meta.innerHTML = metaHtml;
@@ -174,7 +180,18 @@ function createArticleCard(article, showCategory = false) {
   if (article.contentSnippet) {
     const snippet = document.createElement('p');
     snippet.className = 'article-snippet';
-    snippet.textContent = article.contentSnippet.substring(0, 150) + '...';
+
+    let snippetText;
+    // 検索モードの場合はキーワード周辺を抽出
+    if (showCategory && searchKeyword) {
+      snippetText = extractSnippetWithKeyword(article.contentSnippet, searchKeyword);
+      snippet.innerHTML = highlightKeyword(snippetText, searchKeyword);
+    } else {
+      // 通常モードは先頭150文字を表示
+      snippetText = article.contentSnippet.substring(0, 150) + (article.contentSnippet.length > 150 ? '...' : '');
+      snippet.textContent = snippetText;
+    }
+
     card.appendChild(snippet);
   }
 
@@ -185,6 +202,84 @@ function createArticleCard(article, showCategory = false) {
 function showError(message) {
   const articlesListEl = document.getElementById('articlesList');
   articlesListEl.innerHTML = `<p class="error">${message}</p>`;
+}
+
+// テキストをHTMLエスケープ
+function escapeHtml(text) {
+  const map = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;'
+  };
+  return text.replace(/[&<>"']/g, (m) => map[m]);
+}
+
+// 検索キーワードをハイライト
+function highlightKeyword(text, keyword) {
+  if (!keyword || !text) return escapeHtml(text);
+
+  // テキストをエスケープ
+  const escapedText = escapeHtml(text);
+
+  // キーワードもエスケープ
+  const escapedKeyword = escapeHtml(keyword);
+
+  // 大文字小文字を区別せずにマッチ
+  const regex = new RegExp(`(${escapedKeyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+
+  // マッチした部分を<mark>タグで囲む
+  return escapedText.replace(regex, '<mark class="search-highlight">$1</mark>');
+}
+
+// キーワード周辺のテキストを抽出（スマート切り詰め）
+function extractSnippetWithKeyword(text, keyword, maxLength = 150) {
+  if (!text) return '';
+  if (!keyword) return text.substring(0, maxLength) + (text.length > maxLength ? '...' : '');
+
+  // 大文字小文字を区別せずにキーワードの位置を探す
+  const lowerText = text.toLowerCase();
+  const lowerKeyword = keyword.toLowerCase();
+  const keywordIndex = lowerText.indexOf(lowerKeyword);
+
+  // キーワードが見つからない場合は通常の切り詰め
+  if (keywordIndex === -1) {
+    return text.substring(0, maxLength) + (text.length > maxLength ? '...' : '');
+  }
+
+  // キーワードを中心に前後の文字を取得
+  const keywordLength = keyword.length;
+  const halfLength = Math.floor((maxLength - keywordLength) / 2);
+
+  let start = Math.max(0, keywordIndex - halfLength);
+  let end = Math.min(text.length, keywordIndex + keywordLength + halfLength);
+
+  // 開始位置を調整（単語の途中で切れないように）
+  if (start > 0) {
+    // 前方の空白を探す
+    const spaceBeforeStart = text.lastIndexOf(' ', start);
+    if (spaceBeforeStart !== -1 && spaceBeforeStart >= start - 20) {
+      start = spaceBeforeStart + 1;
+    }
+  }
+
+  // 終了位置を調整（単語の途中で切れないように）
+  if (end < text.length) {
+    // 後方の空白を探す
+    const spaceAfterEnd = text.indexOf(' ', end);
+    if (spaceAfterEnd !== -1 && spaceAfterEnd <= end + 20) {
+      end = spaceAfterEnd;
+    }
+  }
+
+  // 抽出したテキストを組み立て
+  let snippet = '';
+  if (start > 0) snippet += '...';
+  snippet += text.substring(start, end);
+  if (end < text.length) snippet += '...';
+
+  return snippet;
 }
 
 // 検索機能のイベントリスナーを設定

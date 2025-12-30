@@ -123,6 +123,15 @@ body {
   font-weight: 500;
 }
 
+/* 検索ハイライト */
+.search-highlight {
+  background-color: #ffeb3b;
+  color: #333;
+  padding: 0.1rem 0.2rem;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
 /* カテゴリタブ */
 .category-tabs {
   display: flex;
