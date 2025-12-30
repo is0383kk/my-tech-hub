@@ -29,7 +29,8 @@ my-feed-hub/
 │   ├── dataManager.js           # データ管理（90日保持ポリシー）
 │   ├── historyManager.js        # 投稿履歴管理（重複投稿防止）
 │   └── discordPoster.js         # Discord通知
-├── categories.json              # カテゴリ・RSSフィード設定
+├── categories.example.json      # カテゴリ設定のテンプレート
+├── categories.json              # カテゴリ・RSSフィード設定（ユーザー作成、Git管理外）
 ├── post-history.json            # Discord投稿履歴（90日間保持、リポジトリ管理）
 ├── server.js                    # ローカルプレビューサーバー
 └── package.json                 # npm設定・依存関係
@@ -43,20 +44,20 @@ my-feed-hub/
 
 ## ３．セットアップ
 
-### ■ 本リポジトリをクローン
+### ■ リリースページからモジュールをダウンロード
 
-```
-git clone https://github.com/is0383kk/my-feed-hub.git
-```
+[リリースページ](https://github.com/is0383kk/my-feed-hub/releases)からモジュールをダウンロードしてください。
 
-### ■ GitHub Pages の有効化
+### ■ リポジトリの作成＆GitHub Pages の有効化
 
-GitHub リポジトリの Settings > Pages で以下を設定します：
+GitHub リポジトリを作成してください  
+作成後、GitHub リポジトリの**Settings > Pages**で以下を設定します：
 
 - Source: GitHub Actions
 
 ### ■ 環境変数の設定（オプション）
 
+リリースモジュール側の設定を行います  
 Discord に通知させる場合は、GitHub リポジトリの **Settings > Secrets and variables > Actions** で新しいシークレットを追加します。
 
 - Name: `DISCORD_WEBHOOK_AWS`
@@ -72,16 +73,27 @@ env:
 
 ### ■ カテゴリの設定
 
-`categories.json` でカテゴリと RSS フィードを管理します。
+リリースモジュール側の設定を行います
+まず、`categories.example.json` をコピーして `categories.json` を作成します
+
+```bash
+# Linuxの場合
+cp categories.example.json categories.json
+
+# Windowsの場合
+copy categories.example.json categories.json
+```
+
+その後、`categories.json` でカテゴリと RSS フィードを修正します
 
 ```json
 {
   "categories": [
     {
-      "name": "一般",
-      "id": "tech_general",
-      "feedUrl": "https://www.publickey1.jp/atom.xml",
-      "webhookEnvKey": "DISCORD_WEBHOOK_TECH_GENERAL"
+      "name": "General",
+      "id": "general",
+      "feedUrl": "https://example.com/feed.xml",
+      "webhookEnvKey": "DISCORD_WEBHOOK_GENERAL"
     },
     {
       "name": "AWS",
@@ -100,10 +112,13 @@ env:
 - `feedUrl`: RSS フィードの URL
 - `webhookEnvKey`: Discord Webhook 用環境変数の名前（オプション）
 
-### ■ リポジトリを更新し、ワークフローを実行する
+**注意:** `categories.json` は `.gitignore` に含まれており、Git 管理されません。各ユーザーが自分の RSS フィードを設定できます。
 
-リポジトリを更新し **Actions > feed-collector-and-poster > Run workflow** でワークフローを実行します。
-その後、デプロイされた WEB ページを確認します。
+### ■ 修正したリリースモジュールをプッシュしワークフローを実行する
+
+リリースモジュールをリポジトリにプッシュします  
+ワークフローは自動実行されますが、**Actions > feed-collector-and-poster > Run workflow** でワークフローを手動で実行することも可能です  
+ワークフロー実行後、GitHub Pages 上にデプロイされた WEB ページを確認します
 
 ## ４．ローカル環境下での動作確認
 

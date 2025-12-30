@@ -1,0 +1,16 @@
+{
+  "categories": [
+    {
+      "name": "General",
+      "id": "general",
+      "feedUrl": "https://XXXXX/atom.xml",
+      "webhookEnvKey": "DISCORD_WEBHOOK_GENERAL"
+    },
+    {
+      "name": "AWS",
+      "id": "aws",
+      "feedUrl": "https://aws.amazon.com/jp/about-aws/whats-new/recent/feed/",
+      "webhookEnvKey": ""
+    }
+  ]
+}

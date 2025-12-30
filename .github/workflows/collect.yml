@@ -18,32 +18,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: チェックアウト
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Node.jsのセットアップ
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: 依存関係のインストール
+      - name: Install Dependencies
         run: npm install
 
-      - name: 情報収集とDiscordへの投稿
+      - name: Execute Data Collection and Posting
         env:
           DISCORD_WEBHOOK_AWS: ${{ secrets.DISCORD_WEBHOOK_AWS }}
           DISCORD_WEBHOOK_TECH_GENERAL: ${{ secrets.DISCORD_WEBHOOK_TECH_GENERAL }}
         run: npm start
 
-      - name: データの変更をコミット
+      - name: Commit and Push Changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add docs/data/ post-history.json
           if git diff --staged --quiet; then
-            echo "データに変更はありません"
+            echo "No changes to commit"
           else
-            git commit -m "記事一覧を更新 $(date +'%Y-%m-%d %H:%M:%S')"
+            git commit -m "Article List Updated：$(date +'%Y-%m-%d %H:%M:%S')"
             git push
           fi
 
@@ -57,19 +57,19 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: チェックアウト
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: main
 
-      - name: GitHub Pagesのセットアップ
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
 
-      - name: アップロード
+      - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: "./docs"
 
-      - name: GitHub Pagesにデプロイ
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
