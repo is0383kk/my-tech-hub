@@ -3,6 +3,14 @@
   "categoryName": "Developers.IO",
   "articles": [
     {
+      "id": "6e7htVWCTMWPBm21Sn1OA3",
+      "title": "Amazon Quick Suite のフロー機能で Quick Sight ダッシュボードの内容を Slack へ定期通知できるか検証してみた",
+      "link": "https://dev.classmethod.jp/articles/quick-suite-flow-quicksight-slack-notification/",
+      "pubDate": "2025-12-31T03:15:53.000Z",
+      "contentSnippet": "Amazon Quick Suite のフロー機能で Quick Sight ダッシュボードの内容を Slack へ定期通知できるか検証してみた",
+      "siteName": "Developers.IO"
+    },
+    {
       "id": "6tpdzffZ2ENbUWMFF0pkhN",
       "title": "Omniの初期セットアップ（Connection作成・dbt連携・権限設定・etc）をやってみた",
       "link": "https://dev.classmethod.jp/articles/omni-try-initial-setup/",
@@ -267,5 +275,5 @@
       "siteName": "Developers.IO"
     }
   ],
-  "lastUpdated": "2025-12-31T01:06:07.502Z"
+  "lastUpdated": "2025-12-31T03:57:07.487Z"
 }
