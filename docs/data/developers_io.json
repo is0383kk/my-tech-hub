@@ -3,6 +3,38 @@
   "categoryName": "Developers.IO",
   "articles": [
     {
+      "id": "2Irdtyup4Fi4V08K4b5b0M",
+      "title": "「Kiro」の料金プラン損益分岐点を試算、月末アップグレードによるコスト最適化を検証してみた",
+      "link": "https://dev.classmethod.jp/articles/kiro-cost-optimization-month-end/",
+      "pubDate": "2025-12-31T08:22:10.000Z",
+      "contentSnippet": "AIコードエディタKiroの3つの有料課金プラン、損益分岐は PRO→PRO+は月間1,500クレジット、PRO+→POWERは6,000クレジット。月末に適切なプランにアップグレードする事で、超過料金を最適化した利用が実現可能です。",
+      "siteName": "Developers.IO"
+    },
+    {
+      "id": "G9kBb9H9gyH61e4Oca7Yx",
+      "title": "Terraform AWS modulesでコンテナLambdaをデプロイする実装方法",
+      "link": "https://dev.classmethod.jp/articles/terraform-lambda-container-deployment/",
+      "pubDate": "2025-12-31T08:21:09.000Z",
+      "contentSnippet": "Terraform AWS modulesでコンテナLambdaをデプロイする実装方法",
+      "siteName": "Developers.IO"
+    },
+    {
+      "id": "3MxPdeVYm6qeanPYw81SAG",
+      "title": "iOSアプリ開発者による2025年のふりかえり",
+      "link": "https://dev.classmethod.jp/articles/ios-app-development-2025-review/",
+      "pubDate": "2025-12-31T07:57:49.000Z",
+      "contentSnippet": "iOSアプリ開発者による2025年のふりかえり",
+      "siteName": "Developers.IO"
+    },
+    {
+      "id": "4M3xGdRWYxiHPyv4aPc7xn",
+      "title": "AWS Card Clash がスマホアプリになったので遊んでみた",
+      "link": "https://dev.classmethod.jp/articles/aws-card-clash-mobile-app/",
+      "pubDate": "2025-12-31T06:45:26.000Z",
+      "contentSnippet": "AWS Card Clash がスマホアプリになったので遊んでみた",
+      "siteName": "Developers.IO"
+    },
+    {
       "id": "2gyYvEjNXUOTNNw6H2A0B3",
       "title": "【2025年版】  Amazon Bedrock AgentCoreまとめ資料を公開します！",
       "link": "https://dev.classmethod.jp/articles/amazon-bedrock-agentcore-2025-summary/",
@@ -47,7 +79,7 @@
       "title": "【Gemini × Google Sites】 HTMLわからなくてもできた！Geminiでハンズオン資料のウェブページを作成してみた",
       "link": "https://dev.classmethod.jp/articles/notebooklm_handson_gemini/",
       "pubDate": "2025-12-30T23:00:23.000Z",
-      "contentSnippet": "ノーコードツール（Google Sites）の手軽さと生成AIのコーディング能力（Gemini）を組み合わせて、専門知識不要でウェブページ作成が可能であることを実証。ノーコードツールに「AIが書いたコード」を埋め込み、NoteookLMハンズオンの資料作成をした記録。AIの「いいとこ取り」してみた。",
+      "contentSnippet": "自分はコード書かずに（ノーコード）GeminiとGoogle Sitesを組み合わせて、専門知識不要でウェブページが作成可能に。ノーコードツールに「AIが書いたコード」を埋め込み、NoteookLMハンズオンの資料作成をした記録。AIの「いいとこ取り」してみた。",
       "siteName": "Developers.IO"
     },
     {
@@ -299,5 +331,5 @@
       "siteName": "Developers.IO"
     }
   ],
-  "lastUpdated": "2025-12-31T06:22:17.015Z"
+  "lastUpdated": "2025-12-31T09:17:35.880Z"
 }

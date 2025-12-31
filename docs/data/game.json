@@ -3,6 +3,22 @@
   "categoryName": "ゲーム",
   "articles": [
     {
+      "id": "https://automaton-media.com/?p=393860",
+      "title": "AUTOMATONライター陣が選ぶ「ゲーム・オブ・ザ・イヤー 2025」",
+      "link": "https://automaton-media.com/articles/columnjp/20251231-393860/",
+      "pubDate": "2025-12-31T09:00:10.000Z",
+      "contentSnippet": "大晦日を飾る本稿では、1年の総括として各ライターの個人的なゲーム・オブ・ザ・イヤーを紹介する。",
+      "siteName": "AUTOMATON"
+    },
+    {
+      "id": "https://automaton-media.com/?p=394335",
+      "title": "『Stardew Valley』開発者、インディー開発で人気のC#フレームワーク「MonoGame」に2000万円ポンと寄付",
+      "link": "https://automaton-media.com/articles/newsjp/stardew-valley-20251231-394335/",
+      "pubDate": "2025-12-31T07:19:49.000Z",
+      "contentSnippet": "『Stardew Valley』の開発者であるEric Barone氏が、ゲーム制作に用いられるC#フレームワーク「MonoGame」に多額の寄付を行ったようだ。",
+      "siteName": "AUTOMATON"
+    },
+    {
       "id": "https://automaton-media.com/?p=394236",
       "title": "配信終了となった彩京STGのSteam版、販売元を変えて再リリース。まずは『戦国エース』『ガンバード』『ストライカーズ1945』から",
       "link": "https://automaton-media.com/articles/newsjp/shooting-20251231-394236/",
@@ -303,5 +319,5 @@
       "contentSnippet": "“趣味で”MMORPGを作った開発者の投稿が、海外掲示板Redditで話題となっている。"
     }
   ],
-  "lastUpdated": "2025-12-31T06:22:19.256Z"
+  "lastUpdated": "2025-12-31T09:17:37.503Z"
 }
