@@ -3,6 +3,14 @@
   "categoryName": "Developers.IO",
   "articles": [
     {
+      "id": "6CdygGEtO1Spv6rvqorjSv",
+      "title": "VPC Service Controls のサービス境界外（別組織）から BigQuery を参照する",
+      "link": "https://dev.classmethod.jp/articles/vpc-service-controls-bigquery/",
+      "pubDate": "2026-01-01T12:01:57.000Z",
+      "contentSnippet": "VPC Service Controls のサービス境界外（別組織）から BigQuery を参照する",
+      "siteName": "Developers.IO"
+    },
+    {
       "id": "26ySyhPSyjkd8WBdQURwd5",
       "title": "EC2 Auto Scaling の Instance Refresh 新機能 「Replace Root Volume」を試してみた",
       "link": "https://dev.classmethod.jp/articles/ec2-autoscaling-instance-refresh-replace-root-volume/",
@@ -451,5 +459,5 @@
       "siteName": "Developers.IO"
     }
   ],
-  "lastUpdated": "2026-01-01T09:17:45.749Z"
+  "lastUpdated": "2026-01-01T12:27:55.635Z"
 }
