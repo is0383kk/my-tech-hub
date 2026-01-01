@@ -3,6 +3,14 @@
   "categoryName": "Developers.IO",
   "articles": [
     {
+      "id": "78VKeZNxM2HA4CZqf6A1g6",
+      "title": "月の途中で Amazon Q Developer Pro から Kiro Pro へアップグレードして Cost Explorer の料金を観察してみた",
+      "link": "https://dev.classmethod.jp/articles/qdev-upgrade-kiro-price/",
+      "pubDate": "2025-12-31T22:37:22.000Z",
+      "contentSnippet": "月の途中で Amazon Q Developer Pro から Kiro Pro へアップグレードして Cost Explorer の料金を観察してみた",
+      "siteName": "Developers.IO"
+    },
+    {
       "id": "3JViz6pizQGAYI7cc9B8d7",
       "title": "AWS Lambda Managed Instances でデフォルトの CPU 使用率ベースのスケーリングの挙動を確認してみた",
       "link": "https://dev.classmethod.jp/articles/aws-lambda-managed-instances-default-cpu-scaling-behavior/",
@@ -395,5 +403,5 @@
       "siteName": "Developers.IO"
     }
   ],
-  "lastUpdated": "2025-12-31T21:12:33.226Z"
+  "lastUpdated": "2026-01-01T01:12:11.219Z"
 }
