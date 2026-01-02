@@ -3,6 +3,14 @@
   "categoryName": "Developers.IO",
   "articles": [
     {
+      "id": "7KHFeQtkkJaEcPxEdYB5HF",
+      "title": "[小ネタ] Strands AgentsのツールでAmazon Bedrock AgentCore Code Interpreterが簡単に使用できるようになっていた",
+      "link": "https://dev.classmethod.jp/articles/strands-agents-builtin-tools-code-interpreter/",
+      "pubDate": "2026-01-02T15:23:11.000Z",
+      "contentSnippet": "[小ネタ] Strands AgentsのツールでAmazon Bedrock AgentCore Code Interpreterが簡単に使用できるようになっていた",
+      "siteName": "Developers.IO"
+    },
+    {
       "id": "4n8Di5ihRiI5o9SrZz6q0t",
       "title": "uvでdbt Core環境を構築し、VS Code（dbt Power User）からSnowflakeに接続してみた",
       "link": "https://dev.classmethod.jp/articles/uv-dbt-core-vs-code-dbt-power-user-snowflake/",
@@ -507,5 +515,5 @@
       "siteName": "Developers.IO"
     }
   ],
-  "lastUpdated": "2026-01-02T15:14:29.856Z"
+  "lastUpdated": "2026-01-02T18:20:15.300Z"
 }
