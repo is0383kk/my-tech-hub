@@ -3,6 +3,22 @@
   "categoryName": "Developers.IO",
   "articles": [
     {
+      "id": "4QBMR6yKoAnHGzZznKSOLa",
+      "title": "Amazon Linux 2023 EC2 インスタンスの初回起動時にセキュリティアップデートは実行されますか",
+      "link": "https://dev.classmethod.jp/articles/tsnote-ec2-amazon-linux-2023-cloud-init-upgrad/",
+      "pubDate": "2026-01-02T02:00:09.000Z",
+      "contentSnippet": "Amazon Linux 2023 EC2 インスタンスの初回起動時にセキュリティアップデートは実行されますか",
+      "siteName": "Developers.IO"
+    },
+    {
+      "id": "3jsZVuNREsfm5BOQOZ4KYv",
+      "title": "[アップデート] Amazon Quick Suite でロールアップグレードリクエスト機能が追加されていたので使ってみた",
+      "link": "https://dev.classmethod.jp/articles/quicksuite-role-upgrade/",
+      "pubDate": "2026-01-02T01:09:21.000Z",
+      "contentSnippet": "[アップデート] Amazon Quick Suite でロールアップグレードリクエスト機能が追加されていたので使ってみた",
+      "siteName": "Developers.IO"
+    },
+    {
       "id": "5UWCl4nE6SpZ76DIm70I2C",
       "title": "Claude Code × Obsidian Daily Note運用を半年続けて3つの改善を試してみた",
       "link": "https://dev.classmethod.jp/articles/claude-code-daily-note-three-improvements/",
@@ -467,5 +483,5 @@
       "siteName": "Developers.IO"
     }
   ],
-  "lastUpdated": "2026-01-02T01:05:51.565Z"
+  "lastUpdated": "2026-01-02T04:00:28.442Z"
 }
