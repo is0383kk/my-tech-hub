@@ -3,6 +3,14 @@
   "categoryName": "Developers.IO",
   "articles": [
     {
+      "id": "BSYX8ocshdxY4rqa7XXGM",
+      "title": "ECS Express Mode で作成したサービスにカスタムドメインを設定してみた #AWSreInvent",
+      "link": "https://dev.classmethod.jp/articles/ecs-express-mode-custom-domain-configuration/",
+      "pubDate": "2026-01-02T09:25:37.000Z",
+      "contentSnippet": "ECS Express Mode で作成したサービスにカスタムドメインを設定してみた #AWSreInvent",
+      "siteName": "Developers.IO"
+    },
+    {
       "id": "5AhTnWnCys3HAKj8VWmyLC",
       "title": "Amazon API Gateway REST API を Amazon SQS と統合して、Lambda 関数を非同期に呼び出す構成を AWS CDK で構築する",
       "link": "https://dev.classmethod.jp/articles/amazon-api-gateway-rest-api-amazon-sqs-lambda-async-cdk/",
@@ -491,5 +499,5 @@
       "siteName": "Developers.IO"
     }
   ],
-  "lastUpdated": "2026-01-02T09:17:39.245Z"
+  "lastUpdated": "2026-01-02T12:26:45.713Z"
 }
