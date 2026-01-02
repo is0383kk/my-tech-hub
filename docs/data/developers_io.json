@@ -3,6 +3,14 @@
   "categoryName": "Developers.IO",
   "articles": [
     {
+      "id": "5AhTnWnCys3HAKj8VWmyLC",
+      "title": "Amazon API Gateway REST API を Amazon SQS と統合して、Lambda 関数を非同期に呼び出す構成を AWS CDK で構築する",
+      "link": "https://dev.classmethod.jp/articles/amazon-api-gateway-rest-api-amazon-sqs-lambda-async-cdk/",
+      "pubDate": "2026-01-02T05:36:59.000Z",
+      "contentSnippet": "Amazon API Gateway REST API を Amazon SQS と統合して、Lambda 関数を非同期に呼び出す構成を AWS CDK で構築する",
+      "siteName": "Developers.IO"
+    },
+    {
       "id": "4QBMR6yKoAnHGzZznKSOLa",
       "title": "Amazon Linux 2023 EC2 インスタンスの初回起動時にセキュリティアップデートは実行されますか",
       "link": "https://dev.classmethod.jp/articles/tsnote-ec2-amazon-linux-2023-cloud-init-upgrad/",
@@ -483,5 +491,5 @@
       "siteName": "Developers.IO"
     }
   ],
-  "lastUpdated": "2026-01-02T04:00:28.442Z"
+  "lastUpdated": "2026-01-02T06:22:13.227Z"
 }
