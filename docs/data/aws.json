@@ -3,6 +3,110 @@
   "categoryName": "AWS",
   "articles": [
     {
+      "id": "8ef7726ca3407bdab01ad968389d236778419e5d",
+      "title": "Amazon Application Recovery Controller Region switch が 3 つの新機能のサポートを開始",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/amazon-application-recovery-controller-region-switch-new-capabilities",
+      "pubDate": "2025-12-19T15:00:00.000Z",
+      "contentSnippet": "Amazon Application Recovery Controller (ARC) Region switch を使用すると、マルチリージョンアプリケーションが別の AWS リージョンの外で動作するよう切り替えるための特定の手順を調整して、アプリケーションにリージョンの障害が発生した場合の復旧時間を制限できます。Region switch により、これまでフェイルオーバーの手順を完了したり、カスタムダッシュボードを作成したり、組織全体で複数の AWS アカウントでホストされているアプリケーションについて復旧が成功した証拠を手動で収集したりするために必要だったエンジニアリングの労力を削減し、運用上のオーバーヘッドをなくすことができます。本日、Region switch の 3 つの新機能を発表します。\n  AWS GovCloud (米国) サポート: AWS GovCloud (米国東部および米国西部) リージョンで ARC Region switch の一般提供が開始されました。\n  プラン実行レポート: Region switch により、各プラン実行から包括的なレポートが自動的に生成され、選択した Amazon S3 バケットに保存されるようになりました。各レポートには、復旧操作に関係するイベントの詳細なタイムライン、リージョンスイッチの対象となるリソース、アプリケーションステータスアラーム (オプション) のアラーム状態、目標復旧時間 (RTO) の計算が含まれます。これにより、コンプライアンスの責任者および監査人用の証拠やドキュメントをまとめるためにこれまで必要だった手作業の労力が不要になります。\n  DocumentDB グローバルクラスター実行ブロック: Region switch は、9 つの実行ブロックのカタログに加えて、マルチリージョンデータベース自動復旧用の Amazon DocumentDB グローバルクラスター実行ブロックをサポートするようになりました。この機能により、DocumentDB グローバルクラスターのフェイルオーバーおよびスイッチオーバー操作をリージョンスイッチプラン内で調整できます。\n  利用を開始するには、ARC コンソール、API、または CLI を使用してリージョンスイッチプランを作成します。各リージョンで利用できるサービスの情報については、AWS リージョン別のサービス表をご覧ください。ホームページにアクセスするか、ドキュメントをお読みください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "f364e0aebd16d9e48a709eb2a5af118bd5167686",
+      "title": "AWS Private CA OCSP が中国および AWS GovCloud (米国) リージョンで利用可能に",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/aws-private-ca-ocsp-china-govcloud-us-regions",
+      "pubDate": "2025-12-19T15:00:00.000Z",
+      "contentSnippet": "AWS Private Certificate Authority (AWS Private CA) は、中国および AWS GovCloud (米国) リージョンでオンライン証明書ステータスプロトコル (OCSP) をサポートするようになりました。AWS Private CA はフルマネージドのプライベート認証局サービスで、独自の CA インフラストラクチャを実行することによる運用上のオーバーヘッドなしで組織のプライベート証明書を簡単に作成および管理できます。OCSP では証明書をリアルタイムで認証できるため、アプリケーションが証明書失効リスト (CRL) ファイルをダウンロードしなくても個々の証明書の失効ステータスをオンデマンドで確認できます。\n  OCSP サポートにより、これらのリージョンのお客様は、数百キロバイト以上の大規模な証明書失効リスト (CRL) をダウンロードする代わりに、通常はクエリごとに数百バイトしか必要としない最小限の帯域幅の、より効率的な証明書の検証を実装できます。これにより、社内のマイクロサービス通信の検証、ゼロトラストセキュリティアーキテクチャの実装、IoT デバイスの認証といったユースケースにおけるリアルタイムの失効チェックが可能になります。AWS Private CA が OCSP 自動応答インフラストラクチャを完全に管理するので、OCSP サーバーをデプロイしたり、維持したりする必要なしに高可用性が実現します。\n  OCSP が中国 (北京)、中国 (寧夏)、AWS GovCloud (米国東部)、AWS GovCloud (米国西部) の AWS リージョンでもご利用いただけるようになりました。\n  認証局で OCSP を有効にするには、AWS Private CA コンソール、AWS CLI、または API を使用してください。OCSP について詳しくは、AWS Private CA ユーザーガイドの証明書の失効を参照してください。料金情報については、AWS Private CA の料金ページを参照してください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "08c5ac89a4a95c100e9eb9a2225ba25f175afd10",
+      "title": "Amazon SageMaker Studio がコンテナの起動時間を短縮できる SOCI インデックス作成のサポートを開始",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/amazon-sagemaker-nbi-soci/",
+      "pubDate": "2025-12-19T15:00:00.000Z",
+      "contentSnippet": "本日、AWS は Amazon SageMaker Studio における SOCI (Seekable Open Container Initiative) インデックス作成のサポートを発表しました。これにより、カスタムイメージを使用する場合のコンテナ起動時間が 30～50% 短縮されます。Amazon SageMaker Studio は、エンドツーエンドの機械学習開発用の完全に統合されたブラウザベースの環境です。SageMaker Studio には、TensorFlow、PyTorch、Scikit-learn などの一般的な ML フレームワーク向けにあらかじめ構築されたコンテナイメージが用意されており、環境をすばやくセットアップできます。しかし、特定のユースケースに合わせて環境を調整するために追加のライブラリ、依存関係、設定を使用する必要がある場合、データサイエンティストは、あらかじめ設定されたコンポーネントを使用してカスタムコンテナイメージの構築と登録を行い、プロジェクト間の一貫性を確保できます。ML ワークロードが複雑さを増すにつれて、これらのカスタムコンテナイメージのサイズが拡大し、起動時間に数分を要するようになると、迅速な実験とプロトタイピングが不可欠な反復的 ML 開発でボトルネックが発生します。\n  SOCI インデックス作成はコンテナイメージの遅延読み込みを可能にし、必要なコンポーネントのみをダウンロードしてアプリケーションを起動し、必要に応じて追加のファイルをオンデマンドで読み込むことでこの課題に対処します。ユーザーは、カスタムイメージのダウンロードが完了するまで数分待つことなく、数秒のうちに生産的な作業を開始でき、その間にバックグラウンドで環境の初期化が完了します。SOCI インデックス作成を使用するには、Finch CLI、nerdctl、または Docker with SOCI CLI などのツールを使用してカスタムコンテナイメージの SOCI インデックスを作成し、インデックス化されたイメージを Amazon Elastic Container Registry (ECR) にプッシュし、SageMaker イメージリソースの作成時にイメージインデックスの URI を参照してください。\n  SOCI インデックス作成は、Amazon SageMaker Studio が提供されているすべての AWS リージョンでご利用いただけます。SageMaker Studio カスタムイメージに SOCI インデックス作成を実装する方法の詳細については、Amazon SageMaker デベロッパーガイドの独自の SageMaker イメージの利用を参照してください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "27a23143259aea74e95a84a3f57b835dde0bf31a",
+      "title": "Amazon RDS のオブザーバビリティが強化され、スナップショットの Amazon S3 へのエクスポートが可能に",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/amazon-rds-observability-snapshot-exports-s3",
+      "pubDate": "2025-12-19T14:00:00.000Z",
+      "contentSnippet": "Amazon Relational Database Service (RDS) のオブザーバビリティが強化され、Amazon S3 にスナップショットをエクスポートできるようになり、エクスポートの進行状況、失敗、および各タスクのパフォーマンスに関する詳細なインサイトが得られるようになりました。これらの通知により、エクスポートをより詳細にモニタリングし、予測可能性を高めることができます。\n  S3 へのスナップショットのエクスポートにより、RDS データベースのスナップショットから Apache Parquet 形式で Amazon S3 バケットにデータをエクスポートできます。今回のリリースでは、現在のエクスポートの進行状況や長時間実行されているテーブルのテーブルレベルの通知を含む 4 つの新しいイベントタイプが導入され、スナップショットのエクスポートパフォーマンスのより詳細な可視性と、エクスポート操作の問題のトラブルシューティングに関する推奨事項が提供されます。さらに、エクスポートされたテーブル数や保留中のテーブル数などのエクスポートの進行状況を、エクスポートされたデータサイズとともに表示できるため、操作とワークフローをより適切に計画できます。Amazon Simple Notification Service (SNS) を通じてこれらのイベントを登録すると、通知を受け取って、エクスポートされたイベントを AWS マネジメントコンソール、AWS CLI、または SDK で表示できます。\n  この機能は、RDS が一般利用可能なすべての商用リージョンの RDS PostgreSQL、RDS MySQL、および RDS MariaDB エンジンでご利用いただけます。\n  新しいイベントタイプについて詳しくは、RDS のイベントカテゴリを参照してください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "deb1d19b403cb1186fd4ba17da7b0eff920ffcb1",
+      "title": "コスト配分タグによるアカウントタグのサポートを発表",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/cost-allocation-tags/",
+      "pubDate": "2025-12-19T08:00:00.000Z",
+      "contentSnippet": "AWS は、AWS コスト管理製品におけるコスト配分タグによるアカウントタグのサポートを発表しました。これにより、複数のメンバーアカウントを持つお客様は、既存の AWS Organizations アカウントタグをコスト管理ツールで直接利用できるようになります。アカウントタグは AWS Organizations においてアカウントレベルで適用され、タグ付けされたアカウント内で測定されるすべての使用量に自動的に適用されます。これにより、AWS Cost Explorer、コストと使用状況レポート、AWS Budgets、Cost Categories で、個別のアカウントグループを手動で設定および管理する必要がなくなります。\n  アカウントタグのサポートにより、お客様は Cost Explorer およびコストと使用状況レポート (CUR 2.0 および FOCUS) でアカウントタグごとに直接コストを分析できます。お客様は、アカウント ID のリストを設定しなくても、アカウントのグループに AWS Budgets と AWS コスト異常検出アラートを設定できます。お客様は、アカウントタグの上に複雑なコストカテゴリを構築して、さらに詳細な分類を行うこともできます。アカウントタグを使用すると、タグ付けされないリソースのコスト配分が可能になります。これには、払い戻し、クレジット、リソースレベルでタグ付けできない特定のサービス料金などが含まれます。新規アカウントが組織に加わったり、既存のアカウントが削除されたりしても、お客様は関連するタグを追加または更新するだけで、変更がすべてのコスト管理製品に自動的に適用されます。使用を開始するには、お客様は AWS Organizations コンソールでアカウントにタグを適用してから、Billing and Cost Management コンソールの [コスト配分タグ] ページからそれらのアカウントタグを有効にします。この機能は、GovCloud (米国) リージョンと中国 (北京) と中国 (寧夏) リージョンを除くすべての AWS リージョンで一般提供されます。\n  詳しくは、AWS コスト配分タグを使用したコストの整理と追跡を参照してください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "64692cc659f7616ec9fcdbb52ee23551a3d6eb22",
+      "title": "Timestream for InfluxDB が再起動 API コールのサポートを開始",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/timestream-influxdb-restart-api",
+      "pubDate": "2025-12-19T08:00:00.000Z",
+      "contentSnippet": "Amazon Timestream for InfluxDB が InfluxDB バージョン 2 と 3 の両方で再起動 API の提供を開始しました。この新機能により、お客様は AWS マネジメントコンソール、API、または CLI を使用してデータベースインスタンスのシステム再起動を直接トリガーできるようになるため、時系列データベース環境の運用管理を合理化できます。\n  再起動 API により、お客様は耐障害性テストを実行してデータベース再起動時のアプリケーションの動作を検証し、サポートの介入なしで医療関連の問題に対処できます。この機能により、ミッションクリティカルなワークロードを管理する DevOps チームの運用上の柔軟性が強化されます。データベースインスタンスのライフサイクル運用を直接管理できるようになって、より包括的なテスト戦略を実装し、パフォーマンスの懸念に迅速に対応できるようになります。\n  Amazon Timestream for InfluxDB の再起動機能は、Timestream for InfluxDB が提供されているすべてのリージョンでご利用いただけます。\n  Amazon Timestream for InfluxDB 3 の使用を開始するには、Amazon Timestream for InfluxDB コンソールにアクセスしてください。詳細については、Amazon Timestream for InfluxDB ドキュメントおよび料金ページを参照してください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "5407be46b2aca5f32ca05a2b075dbf51ad23724d",
+      "title": "セルフマネージドデータベースソース用のゼロ ETL が 7 つの新しいリージョンで利用可能に",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/zero-etl-for-self-managed-databases-in-additional-regions",
+      "pubDate": "2025-12-19T08:00:00.000Z",
+      "contentSnippet": "AWS Glue は、7 つの新しいリージョンでセルフマネージドデータベースソース用のゼロ ETL をサポートするようになりました。Glue のゼロ ETL を使用して、複雑な設定が排除されたシンプルな操作で、オンプレミスまたは AWS EC2 上にある Oracle、SQL Server、MySQL、PostgreSQL データベースから Redshift にデータを複製するための統合をセットアップできます。\n  セルフマネージドデータベースソース用の AWS ゼロ ETL は、シンプルでコード不要のインターフェイスを使用して、オンプレミスまたは EC2 のデータベースからの継続的なデータレプリケーション用の統合を自動的に作成します。Oracle、SQL Server、MySQL、PostgreSQL の各データベースから Redshift にデータをレプリケートできるようになりました。この機能により、ユーザーの運用上の負担がさらに軽減され、セルフマネージドデータベースから Redshift にデータを取り込むためのデータパイプラインの設計、構築、テストに必要な数週間のエンジニアリング作業の手間を省くことができます。\n  セルフマネージドデータベースソース用の AWS Glue ゼロ ETL が、新しくアジアパシフィック (香港)、アジアパシフィック (東京)、アジアパシフィック (シンガポール)、アジアパシフィック (シドニー)、欧州 (ロンドン)、南米 (サンパウロ)、米国 (バージニア) の AWS リージョンでご利用いただけるようになりました。使用を開始するには、AWS マネジメントコンソールにサインインしてください。詳細については、AWS Glue ページを参照するか、AWS Glue ゼロ ETL のドキュメントをご覧ください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "e7c5fc0f870af5301daca32c20e0c248ac162099",
+      "title": "Amazon Redshift ODBC 2.x ドライバーが Apple macOS のサポートを開始",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/redshift-odbc-2-x-driver-apple-macos/",
+      "pubDate": "2025-12-19T08:00:00.000Z",
+      "contentSnippet": "Amazon Redshift ODBC 2.x ドライバーが Apple macOS をサポートするようになり、デベロッパーおよびアナリストのためにプラットフォームの互換性が拡張されました。この拡張機能により、Apple macOS ユーザーは最新の Amazon Redshift ODBC 2.x ドライバーバージョンを使用して Amazon Redshift クラスターに接続することができます。ODBC 接続を使用して、多くのサードパーティー SQL クライアントツールやアプリケーションから Amazon Redshift クラスターに接続できます。\n  Amazon Redshift ODBC 2.x のネイティブドライバーサポートにより、データ共有書き込み機能や Amazon IAM アイデンティティセンターの統合など、Amazon Redshift ドライバー経由でなければ利用できない Amazon Redshift 機能にアクセスできます。Apple macOS のネイティブサポートにより、抽出、変換、読み込み (ETL) およびビジネスインテリジェンス (BI) ツールとのシームレスな統合が可能になり、Amazon Redshift の全機能にアクセスしながら Apple macOS を使用できます。\n  最新の Amazon Redshift ODBC 2.x ドライバーバージョンにアップグレードして新機能にアクセスすることをお勧めします。インストール手順とシステム要件については、Amazon Redshift ODBC 2.x ドライバーのドキュメントを参照してください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "b1db203d963db2fddcf4d3e6f5be46682b28116a",
+      "title": "Amazon Bedrock データオートメーションがドキュメントブループリント命令の最適化を開始",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/bedrock-data-automation-optimization-document-blueprints/",
+      "pubDate": "2025-12-19T08:00:00.000Z",
+      "contentSnippet": "Amazon Bedrock Data Automation (BDA) はブループリント命令の最適化をサポートするようになりました。これにより、Ground Truth のラベルが付いた少数のサンプルドキュメントアセットを使用するだけで、カスタムフィールド抽出の精度を向上させることができます。BDA は、生成 AI を利用したアプリケーション向けに、ドキュメント、画像、音声、動画といった非構造化マルチモーダルコンテンツからのインサイトの生成を自動化します。ブループリント命令の最適化により、ブループリントの自然言語命令が自動的に改善されるため、モデルトレーニングやファインチューニングを行わなくても数分で本番環境対応の精度を達成できます。\n  ブループリント命令の最適化により、本番環境のワークロードから代表的なドキュメントアセットを最大 10 個取り出して、各フィールドに正しい期待値を提供できるようになりました。ブループリント命令の最適化は、期待される結果とデータオートメーションの推論結果の相違を分析し、自然言語命令を改善してサンプル全体の抽出精度を向上させます。インテリジェントなドキュメント処理アプリケーションでは、請求書の明細項目、契約条件、納税フォームのフィールド、医療請求コードなどの情報を抽出する精度を向上させることができるようになりました。最適化が完了すると、実際の状況に照らして測定された完全一致率や F1 スコアなどの詳細な評価指標が届き、ブループリントを本番環境にデプロイする準備が整ったことを確認できます。\n  ドキュメント用のデータオートメーションブループリント命令の最適化は、Amazon Bedrock データオートメーションがサポートされているすべての AWS リージョンでご利用いただけます。\n  詳細については、Bedrock Data Automation のユーザーガイドと Amazon Bedrock の料金ページをご覧ください。ブループリント命令の最適化を開始するには、Amazon Bedrock コンソールでブループリントに移動し、[データオートメーション] に移動し、ドキュメントのカスタム出力を選択して、[最適化を開始] を選択します。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "b4bad7fdb7a4b1da2ce4d7f522a4777df7de9e32",
+      "title": "Amazon WorkSpaces Applications が Microsoft Windows Server 2025 のサポートを開始",
+      "link": "https://aws.amazon.com/jpabout-aws/whats-new/2025/12/amazon-workspaces-applications-supports-microsoft-windows-server",
+      "pubDate": "2025-12-19T08:00:00.000Z",
+      "contentSnippet": "Amazon WorkSpaces Applications は、Microsoft Windows Server 2025 を利用したイメージの提供を開始しました。これにより、お客様は Microsoft の最新のサーバーオペレーティングシステムから最新の機能や拡張機能を使用してストリーミングインスタンスを開始できます。このアップデートにより、アプリケーションストリーミング環境でセキュリティやパフォーマンスが向上し、最新の機能を利用できます。\n  Windows Server 2025 のサポートにより、Microsoft Windows 11 デスクトップエクスペリエンスをエンドユーザーに提供できるため、特定のアプリケーションやデスクトップストリーミングのニーズに適したオペレーティングシステムをより柔軟に選択できるようになります。ビジネスクリティカルなアプリケーションを実行している場合でも、専用ソフトウェアへのリモートアクセスを提供している場合でも、選択肢が広がって、独自のワークロード要件や組織の基準に合わせてインフラストラクチャを決定できるようになりました。AWS が提供するパブリックイメージから選択することも、Image Builder を使用して独自の要件に合わせたカスタムイメージを作成することもできます。\n  Microsoft Windows Server 2025 のサポートの一般提供が、Amazon WorkSpaces Applications が提供されているすべての AWS リージョンで開始しました。\n  Microsoft Windows Server 2025 イメージの使用を開始するには、Amazon WorkSpaces Applications のドキュメントを参照してください。料金の詳細については、Amazon WorkSpaces Applications の料金ページを参照してください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "15824a9b568044554d1846e29e16b225128220b2",
+      "title": "AWS IoT がオブザーバビリティコストの最適化に役立つイベントベースのログ記録の提供を開始",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/aws-iot-event-based-logging/",
+      "pubDate": "2025-12-19T08:00:00.000Z",
+      "contentSnippet": "AWS IoT はイベントベースのログ記録のサポートを開始しました。これは、デベロッパーが Amazon CloudWatch のコストを削減すると同時にログ管理の効率を向上させる上で役立つ新機能です。この機能により、カスタマイズ可能なログレベルと Amazon CloudWatch ロググループの送信先を使用して、ターゲットを絞った個々のイベントのログ記録が可能になります。\n イベントベースのログ記録では、運用上の重要性に基づいて、さまざまなタイプの IoT イベントにさまざまなログレベルを設定できます。例えば、certificateProvider イベントには INFO レベルのログ記録を設定しながら、接続イベントなどの重要度の低いアクティビティには ERROR レベルのログ記録を維持できます。この詳細な設定により、あらゆるアクティビティが同じ詳細度レベルでログに記録されるというオーバーヘッドを回避しつつ、IoT 運用の包括的な可視性を維持し、コスト削減に役立てると同時にログの検索性と分析効率を向上させることができます。\n AWS IoT がサポートされているすべての AWS リージョンで、AWS IoT コンソール、CLI、API を使用してイベントレベルのログ記録を設定できるようになりました。イベントベースのログ記録の設定について詳しくは、AWS IoT デベロッパーガイドをご覧ください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "6b9bdcdc95d0b7c1db2e9f7ee15c2ed6a7a61826",
+      "title": "Amazon ECR がプッシュ時のリポジトリ作成のサポートを開始",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/amazon-ecr-creating-repositories-on-push/",
+      "pubDate": "2025-12-19T08:00:00.000Z",
+      "contentSnippet": "Amazon Elastic Container Registry (ECR) が、イメージプッシュ時のリポジトリの自動作成をサポートするようになりました。この新機能により、イメージのプッシュ時にリポジトリが存在しない場合は ECR によって自動的に作成されるようになり、コンテナイメージをプッシュする前にお客様がリポジトリを事前に作成する必要がなくなって、コンテナのワークフローが簡素化されます。これにより、お客様がイメージをプッシュすると、定義されたリポジトリ作成テンプレート設定に従って ECR が自動的にリポジトリを作成します。\n  プッシュ時の作成は、AWS のすべての商用リージョンと AWS GovCloud (米国) リージョンでご利用いただけます。リポジトリ作成テンプレートについて詳しくは、ドキュメントをご覧ください。Amazon ECR を使用したコンテナイメージとアーティファクトの保存、管理、デプロイや開始方法の詳細については、製品ページとユーザーガイドをご覧ください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "7b1751d6510eba88c158cb2c5cb32211df159690",
+      "title": "Amazon Aurora が PostgreSQL 17.7、16.11、15.15、14.20、13.23 のサポートを開始",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/amazon-aurora-postgresql-17-7-16-11-15-15-14-20-13-23",
+      "pubDate": "2025-12-18T17:00:00.000Z",
+      "contentSnippet": "Amazon Aurora PostgreSQL 互換エディションは、PostgreSQL バージョン 17.7、16.11、15.15、14.20、13.23 をサポートするようになりました。このアップデートには、PostgreSQL コミュニティの製品改善とバグ修正に加えて、Aurora 固有の機能強化も含まれています。\n  このリリースには、ブルー/グリーンデプロイの改善が含まれており、プライマリインスタンスでの新しいコミットが制限されることでスイッチオーバーの時間が短縮されました。また、クエリプラン管理 (QPM) も強化され、データベース復旧中のコミットログの読み込みを最適化することでインスタンスの復旧時間が短縮されました。\n  Amazon RDS マネジメントコンソールから数回のクリックで、新しい Aurora PostgreSQL 互換データベースを作成し、この最新バージョンを利用できます。既存のデータベースをアップグレードすることもできます。アップグレードについて詳しくは、Aurora のドキュメントをご確認ください。アップグレードの頻度やアップグレードプロセスの計画方法を決定する際には、Aurora バージョンポリシーを参照してください。今回の更新は、AWS のすべての商用リージョンと AWS GovCloud (米国) リージョンでご利用いただけます。\n  Amazon Aurora は MySQL および PostgreSQL との完全な互換性を備えており、圧倒的な高いパフォーマンスおよび可用性を世界規模で実現するように設計されています。このサービスは、組み込みのセキュリティ、継続的なバックアップ、サーバーレスコンピューティング、最大 15 のリードレプリカ、自動化されたマルチリージョンレプリケーション、AWS の他のサービスとの統合を提供します。Amazon Aurora の使用を開始するには、開始方法のページをご覧ください。",
+      "siteName": "AWS What's New"
+    },
+    {
       "id": "fd8606ae7b473bbd13f0da6a3a7d5885b0f39457",
       "title": "AWS Shield ネットワークセキュリティディレクターがマルチアカウント分析のサポートを開始",
       "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/aws-shield-network-security-director-multi-account-analysis",
@@ -803,5 +907,5 @@
       "siteName": "AWS What's New"
     }
   ],
-  "lastUpdated": "2026-01-02T18:20:15.428Z"
+  "lastUpdated": "2026-01-02T21:10:59.128Z"
 }

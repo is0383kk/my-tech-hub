@@ -15,7 +15,7 @@
     {
       "id": "aws",
       "name": "AWS",
-      "articleCount": 100,
+      "articleCount": 113,
       "dataFile": "aws.json"
     },
     {
@@ -25,5 +25,5 @@
       "dataFile": "game.json"
     }
   ],
-  "generatedAt": "2026-01-02T18:20:17.088Z"
+  "generatedAt": "2026-01-02T21:11:01.107Z"
 }
