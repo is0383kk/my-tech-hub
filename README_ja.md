@@ -33,8 +33,7 @@ your-feed-hub/
 │   ├── dataManager.js           # データ管理（90日保持ポリシー）
 │   ├── historyManager.js        # 投稿履歴管理（重複投稿防止）
 │   └── discordPoster.js         # Discord通知
-├── categories.example.json      # カテゴリ設定のテンプレート
-├── categories.json              # カテゴリ・RSSフィード設定（ユーザー作成、Git管理外）
+├── categories.json              # カテゴリ・RSSフィード設定（ユーザー作成）
 ├── post-history.json            # Discord投稿履歴（90日間保持、リポジトリ管理）
 ├── server.js                    # ローカルプレビューサーバー
 └── package.json                 # npm設定・依存関係

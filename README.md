@@ -33,8 +33,7 @@ your-feed-hub/
 │   ├── dataManager.js           # Data management (90-day retention policy)
 │   ├── historyManager.js        # Post history management (duplicate post prevention)
 │   └── discordPoster.js         # Discord notification
-├── categories.example.json      # Category configuration template
-├── categories.json              # Category & RSS feed configuration (user-created, not Git-managed)
+├── categories.json              # Category & RSS feed configuration (user-created)
 ├── post-history.json            # Discord post history (retained for 90 days, repository-managed)
 ├── server.js                    # Local preview server
 └── package.json                 # npm configuration & dependencies
