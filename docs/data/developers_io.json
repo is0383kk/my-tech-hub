@@ -3,6 +3,14 @@
   "categoryName": "Developers.IO",
   "articles": [
     {
+      "id": "2ttvtzUX9EoeDeVC2M3CRc",
+      "title": "【JAWS-UG神戸×IoT専門支部コラボ】IoTをこれからやる方も、もっとやっていきたい方も！を開催しました",
+      "link": "https://dev.classmethod.jp/articles/jawsug-iot-event-20251212-report/",
+      "pubDate": "2026-01-03T07:55:48.000Z",
+      "contentSnippet": "【JAWS-UG神戸×IoT専門支部コラボ】IoTをこれからやる方も、もっとやっていきたい方も！を開催しました",
+      "siteName": "Developers.IO"
+    },
+    {
       "id": "oFmhJ9CyNCxvPu6OKaDyO",
       "title": "LaunchInstances API を利用して、指定した特定の AZ に EC2 インスタンスを起動してみた",
       "link": "https://dev.classmethod.jp/articles/ec2-auto-scaling-launchinstances-api-az/",
@@ -531,5 +539,5 @@
       "siteName": "Developers.IO"
     }
   ],
-  "lastUpdated": "2026-01-03T06:20:49.476Z"
+  "lastUpdated": "2026-01-03T09:14:06.450Z"
 }

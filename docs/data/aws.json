@@ -507,11 +507,67 @@
       "siteName": "AWS What's New"
     },
     {
+      "id": "f2eba0efa3c00847fe1ac4881506b064d3e24799",
+      "title": "Amazon Managed Service for Apache Flink が AWS アジアパシフィック (オークランド) リージョンで利用可能に",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/amazon-managed-service-apache-flink-aws-asia-pacific-auckland-region/",
+      "pubDate": "2025-12-15T18:00:00.000Z",
+      "contentSnippet": "本日より、アジアパシフィック (オークランド) リージョンで Amazon Managed Service for Apache Flink を使用して、リアルタイムのストリーム処理アプリケーションを構築できます。\n  Amazon Managed Service for Apache Flink を使用すると、Apache Flink を使用してストリーミングデータをリアルタイムで簡単に変換および分析できます。Apache Flink はオープンソースのフレームワークであり、データストリームを処理するためのエンジンです。Amazon Managed Service for Apache Flink は、Apache Flink アプリケーションの構築と管理の複雑さを軽減し、組み込みのコネクタを使用して、Amazon Managed Streaming for Apache Kafka (Amazon MSK)、Amazon Kinesis Data Streams、Amazon OpenSearch Service、Amazon DynamoDB Streams、Amazon Simple Storage Service (Amazon S3)、カスタム統合などと統合します。\n  Amazon Managed Service for Apache Flink の詳細については、こちらをご覧ください。Amazon Managed Service for Apache Flink を利用可能なリージョンについては、AWS リージョン表を参照してください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "fe168a228b4fe066386b213e2fc1574d3c2632fb",
+      "title": "ユーザーの属性を使用したコスト配分の発表",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/cost-allocation-using-users-attributes",
+      "pubDate": "2025-12-15T18:00:00.000Z",
+      "contentSnippet": "AWS は、コストセンター、部門、組織、部署などの既存のワークフォースユーザーの属性を使用して、AWS アプリケーションの使用状況とコストを追跡および分析する、新しいコスト配分機能を発表しました。この新機能により、お客様は Amazon Q Business、Amazon Q Developer、Amazon QuickSight などの AWS アプリケーションのユーザーごとの月額サブスクリプション料金とオンデマンド料金を、それぞれの社内ビジネスユニットに割り当てることができます。\n  お客様は、ワークフォースユーザーの属性を IAM Identity Center にインポートする必要があります。IAM Identity Center は、AWS アプリケーションへのワークフォースアクセスを管理するための推奨サービスです。属性をインポートした後、お客様は AWS Billing and Cost Management コンソールからこれらの属性の 1 つ以上をコスト配分タグとして有効にできます。ユーザーが AWS アプリケーションにアクセスすると、その使用状況とコストは選択した属性で自動的に記録されます。Cloud Financial Operations (FinOps) の専門家は、AWS Cost Explorer と AWS CUR 2.0 でコストを表示および分析できるため、さまざまなチームが AWS の使用状況とコストをどのように関与しているのかを把握できます。\n  ユーザー属性を使用したコスト配分のサポートは、GovCloud (米国) リージョンと中国 (北京) と中国 (寧夏) リージョンを除くすべての AWS リージョンで一般提供されます。\n  詳細については、「AWS コスト配分タグを使用したコストの整理と追跡」を参照してください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "736fe4622b5be878a68e461f73a0143a0644bf68",
+      "title": "Amazon Elastic VMware Service (Amazon EVS) が利用可能なリージョンが追加されました",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/amazon-evs-available-in-additional-regions/",
+      "pubDate": "2025-12-15T18:00:00.000Z",
+      "contentSnippet": "本日、Amazon Elastic VMware Service (Amazon EVS) が、米国西部 (北カリフォルニア)、アジアパシフィック (ハイデラバード)、アジアパシフィック (マレーシア)、カナダ西部 (カルガリー)、欧州 (ミラノ)、メキシコ (中部)、南米 (サンパウロ) の各リージョンのすべてのアベイラビリティーゾーンで利用できるようになったことをお知らせします。この拡張により、クラウドで VMware ワークロードを実行する際に AWS のスケールと柔軟性を活用するためのオプションが増えました。\n  Amazon EVS では、AWS Nitro を活用して、EC2 ベアメタルインスタンス上の Amazon Virtual Private Cloud (VPC) 内で VMware Cloud Foundation (VCF) を直接実行できます。ステップバイステップの設定ワークフローまたは自動デプロイ機能を備えた AWS コマンドラインインターフェイス (CLI) のいずれかを使用すると、完全な VCF 環境をわずか数時間で設定できます。この迅速なデプロイにより、AWS へのワークロードの移行が迅速になり、老朽化したインフラストラクチャの排除、運用上のリスクの軽減、データセンターの終了に関する重要なタイムラインの遵守が可能になります。\n  これらのリージョンでさらに利用可能になったため、エンドユーザーとの距離が近くなって VMware ワークロードのレイテンシーが低減され、データレジデンシーまたは主権の要件への準拠が可能になり、冗長戦略を強化するための高可用性と耐障害性のオプションが増えます。\n  使用を開始するには、Amazon EVS 製品詳細ページとユーザーガイドをご覧ください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "1298ecc04f44ecbac0b2c70a59f4b37aa56b2671",
+      "title": "Amazon Connect で評価フォームでの複数の選択肢および日付の質問のサポートを開始",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/amazon-connect-multiple-choice-date-questions-evaluation-forms/",
+      "pubDate": "2025-12-15T18:00:00.000Z",
+      "contentSnippet": "Amazon Connect で、人間と AI エージェントのパフォーマンスに関するより深いインサイトを得るための 2 つの新しい評価に関する質問のタイプが用意されました。マネージャーは、営業の会話で顧客が興味を持った製品など、複数の回答を選択できる質問を作成できるようになりました。さらに、マネージャーは顧客とエージェントのアクションの日付を評価フォームで得ることができます。たとえば、顧客がいつローンを申し込んだか、いつ承認されたかを記録できます。\n  この機能は、Amazon Connect が提供されているすべてのリージョンで利用できます。詳細については、ドキュメントとウェブページをご覧ください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "b7997a42c10601969c67fa6477ff1f70f43d86cb",
+      "title": "AWS Billing and Cost Management でダッシュボードの PDF エクスポートと CSV データのダウンロードのサポートを開始",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/aws-billing-cost-management-pdf-export-csv-data-download-dashboards",
+      "pubDate": "2025-12-15T15:00:00.000Z",
+      "contentSnippet": "本日、AWS は AWS Billing and Cost Management ダッシュボードの PDF エクスポートと CSV データのダウンロードの機能を発表しました。これらの新機能により、カスタマイズしたダッシュボードを PDF ファイルとしてエクスポートしてオフラインで分析および共有したり、個々のウィジェットデータを CSV 形式でダウンロードしてスプレッドシートアプリケーションで詳細に調べたりすることができます。これらの機能により、閲覧可能または編集可能なアクセス権を持つダッシュボードを共有できるだけでなく、組織全体に AWS コストに関するインサイトを配布する方法が増えました。\n  Billing and Cost Management ダッシュボードでは、ダッシュボード全体または個々のウィジェットをコンソールから直接 PDF ファイルとしてエクスポートできるため、スクリーンショットや手動でフォーマットする必要がなくなります。PDF エクスポート機能では、一貫した外観を維持し、ダッシュボードのレイアウトを維持するようにフォーマットされたレポートを作成できるため、取締役会、レビュー、戦略的な計画セッションでステークホルダーと共有するのに理想的です。詳細なデータ分析が必要な場合は、個々のウィジェットデータを CSV 形式でエクスポートできます。これにより、アナリストは好みのスプレッドシートツールで特定のコスト指標を詳細に調べることができます。\n  AWS Billing and Cost Management ダッシュボードの PDF および CSV のエクスポート機能は、AWS 中国リージョンを除く、すべての AWS 商用リージョンにて、追加料金なしでご利用いただけます。\n  使用を開始するには、AWS Billing and Cost Management コンソールにアクセスし、左側のナビゲーションメニューから [ダッシュボード] をクリックします。詳細については、AWS Billing and Cost Management のユーザーガイドでのダッシュボードのエクスポートを参照してください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "181972ced53a0b910f4b14ba522a609b7f0243ac",
+      "title": "強化されたネットワークセキュリティポリシーを Amazon EKS で導入",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/amazon-eks-enhanced-network-security-policies",
+      "pubDate": "2025-12-15T15:00:00.000Z",
+      "contentSnippet": "本日、Amazon Elastic Kubernetes Service (EKS) のネットワークポリシー機能が強化されたことを発表します。これにより、お客様が Kubernetes ワークロードのネットワークセキュリティ体制を改善し、クラスター外部の宛先と統合できるようになります。この拡張は、EKS で以前サポートされていたネットワークセグメンテーション機能を基盤としています。これで、クラスター全体にネットワークアクセスフィルターを一元的に適用できるだけでなく、ドメインネームシステム (DNS) ベースのポリシーを活用して、クラスター環境からの送信トラフィックを保護できます。\n  お客様が EKS を使用して継続的にアプリケーション環境をスケールするのに伴い、クラスター内外のリソースへの不正アクセスを防ぐために、ネットワークトラフィックの分離がますます重要になっています。これに対処するため、EKS は Amazon VPC Container Network Interface (VPC CNI) プラグイン に Kubernetes NetworkPolicies のサポートを導入しました。これにより、ポッド間通信を名前空間レベルでセグメント化できるようになりました。クラスター全体のネットワークフィルターを一元管理することで、Kubernetes ネットワーク環境の防御態勢をさらに強化できるようになりました。また、クラスター管理者は、完全修飾ドメイン名 (FQDN) に基づいて外部エンドポイントへのトラフィックをフィルタリングする送信ルールを使用して、クラウドまたはオンプレミスのクラスター外部リソースへの不正アクセスを防止するためのより安定した予測可能なアプローチを利用できるようになりました。\n  これらの新しいネットワークセキュリティ機能は、Kubernetes バージョン 1.29 以降を実行する新しい EKS クラスターのすべての商用 AWS リージョンで利用でき、既存のクラスターも今後数週間以内にサポートされる予定です。ClusterNetworkPolicy は、VPC CNI v1.21.0 以降を使用するすべての EKS クラスター起動モードで使用できます。DNS ベースのポリシーは、EKS オートモードによって起動された EC2 インスタンスでのみサポートされます。詳細については、Amazon EKS のドキュメントをご覧になるか、こちらのローンチブログ投稿をお読みください。",
+      "siteName": "AWS What's New"
+    },
+    {
       "id": "e67a4c669b9bdd577901c3882c5c591e336b4b42",
       "title": "ACM で Kubernetes の自動化された証明書管理のサポートを開始",
       "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/acm-automated-certificate-management-kubernetes/",
       "pubDate": "2025-12-15T08:00:00.000Z",
       "contentSnippet": "AWS Certificate Manager (ACM) は、AWS Controllers for Kubernetes (ACK) を通じて Kubernetes ワークロードの証明書のプロビジョニングと配布を自動化するようになりました。以前から、ACM は Application Load Balancer や CloudFront などの AWS 統合サービスの証明書管理を自動化していました。しかし、Kubernetes で TLS を終了するアプリケーションで ACM 証明書を使用するには、API 経由で証明書とプライベートキーをエクスポートし、Kubernetes シークレットを作成し、更新時に更新するという手動の手順が必要でした。この統合により、ACM の自動化がパブリック証明書とプライベート証明書の両方の Kubernetes ワークロードに拡張され、ネイティブ Kubernetes API を使用して証明書を管理できるようになりました。\n  ACK では、証明書を Kubernetes リソースとして定義すると、ACK コントローラーが証明書ライフサイクル全体を自動化します。つまり、ACM から証明書をリクエストし、検証後にエクスポートし、証明書とプライベートキーで Kubernetes シークレットを更新し、更新時にそれらのシークレットを自動的に更新します。これにより、ACM のエクスポート可能なパブリック証明書 (2025 年 6 月に開始) をインターネットに接続するワークロードに使用したり、AWS Private CA のプライベート証明書を Amazon EKS やその他の Kubernetes 環境の内部サービスに使用したりできます。ユースケースには、アプリケーションポッド (NGINX、カスタムアプリケーション) での TLS の終了、サービスメッシュ通信 (Istio、Linkerd) の保護、サードパーティのイングレスコントローラー (NGINX Ingress、Traefik) の証明書の管理などがあります。証明書をハイブリッドおよびエッジの Kubernetes 環境に配布することもできます。\n  この機能は、ACM を利用できるすべての商用、AWS GovCloud (米国)、および AWS 中国リージョンで利用できます。\n 詳細については、GitHub のリンクにアクセスするか、ドキュメントおよび価格ページをご覧ください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "49ed6f42489a8748b5022fd6fb6744e111104253",
+      "title": "Amazon EC2 M7a インスタンスが欧州 (ロンドン) リージョンで使用可能に",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/ec2-m7a-instances-europe-london-region/",
+      "pubDate": "2025-12-15T08:00:00.000Z",
+      "contentSnippet": "本日より、汎用 Amazon EC2 M7a インスタンスが AWS 欧州 (ロンドン) リージョンで利用可能になりました。M7a インスタンスは、最大周波数が 3.7 GHz の第 4 世代 AMD EPYC プロセッサ (コードネーム Genoa) を搭載しており、M6a インスタンスと比較して最大 50% 高いパフォーマンスを発揮します。\n \n今回のリージョン追加により、M7a インスタンスは、米国東部 (オハイオ)、米国東部 (バージニア北部)、米国西部 (オレゴン)、アジアパシフィック (シドニー、東京)、欧州 (フランクフルト、アイルランド、スペイン、ストックホルム、ロンドン) の各 AWS リージョンでご利用いただけるようになりました。これらのインスタンスは、Savings Plans、リザーブド、オンデマンド、およびスポットインスタンスとして購入できます。使用を開始するには、AWS マネジメントコンソール、AWS コマンドラインインターフェイス (CLI)、および AWS SDK にアクセスしてください。詳細については、M7a インスタンスのページをご覧ください。",
       "siteName": "AWS What's New"
     },
     {
@@ -527,7 +583,7 @@
       "title": "Amazon EMR Managed Scaling がさらに 7 つの AWS リージョンで利用可能に",
       "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/amazon-emr-managed-scaling-additional-regions",
       "pubDate": "2025-12-12T15:00:00.000Z",
-      "contentSnippet": "Amazon EMR Managed Scaling が、アジアパシフィック (マレーシア、ニュージーランド、台北、タイ)、カナダ西部 (カルガリー)、メキシコ (中部)、US Gameday Northeast (イリノイ) の AWS リージョンで EC2 の EMR を使用しているお客様にご利用いただけるようになりました。Amazon EMR Managed Scaling は、可能な限り最小のコストで最高のパフォーマンスを発揮できるよう、EMR クラスターでの EC2 インスタンスのサイズを自動的に変更します。\n  Amazon EMR Managed Scaling を使用すると、クラスターの最小コンピューティング制限と最大コンピューティング制限を指定するだけで、パフォーマンスとリソース使用率が最適になるように、EC2 上の Amazon EMR によってクラスターのサイズが自動的に変更されます。Amazon EMR Managed Scaling は、ワークロード関連の主要なメトリックスを常に監視し、リソースを最大限に活用できるようにクラスターサイズを最適化するアルゴリズムを使用します。このアルゴリズムを使用すると、Amazon EMR では、ピーク時に EC2 クラスターをスケールアップし、アイドル時にスケールダウンできるため、コストを削減し、クラスター容量を最適化して最高のパフォーマンスを実現できます。Amazon EMR Managed Scaling は Amazon EC2 スポットインスタンスと併用することもできます。そのようにすると、未使用の EC2 容量をオンデマンド料金と比較して割引価格で活用できます。\n  Amazon EMR Managed Scaling がすべての AWS 商用リージョンで利用可能になりました。\n  Amazon EMR Managed Scaling は、EC2 バージョン 6.14 以降の Amazon EMR 上の Apache Spark、Apache Hive、および YARN ベースのワークロードでサポートされています。詳細と開始方法については、Amazon EMR Managed Scalingの ユーザーガイドをご覧ください。",
+      "contentSnippet": "Amazon EMR Managed Scaling が、アジアパシフィック (マレーシア、メルボルン、ニュージーランド、台北、タイ)、カナダ西部 (カルガリー)、メキシコ (中部) の AWS リージョンで EC2 の EMR を使用しているお客様にご利用いただけるようになりました。Amazon EMR Managed Scaling は、可能な限り最小のコストで最高のパフォーマンスを発揮できるよう、EMR クラスターでの EC2 インスタンスのサイズを自動的に変更します。\n  Amazon EMR Managed Scaling を使用すると、クラスターの最小コンピューティング制限と最大コンピューティング制限を指定するだけで、パフォーマンスとリソース使用率が最適になるように、EC2 上の Amazon EMR によってクラスターのサイズが自動的に変更されます。Amazon EMR Managed Scaling は、ワークロード関連の主要なメトリックスを常に監視し、リソースを最大限に活用できるようにクラスターサイズを最適化するアルゴリズムを使用します。このアルゴリズムを使用すると、Amazon EMR では、ピーク時に EC2 クラスターをスケールアップし、アイドル時にスケールダウンできるため、コストを削減し、クラスター容量を最適化して最高のパフォーマンスを実現できます。Amazon EMR Managed Scaling は Amazon EC2 スポットインスタンスと併用することもできます。そのようにすると、未使用の EC2 容量をオンデマンド料金と比較して割引価格で活用できます。\n  Amazon EMR Managed Scaling がすべての AWS 商用リージョンで利用可能になりました。\n  Amazon EMR Managed Scaling は、EC2 バージョン 6.14 以降の Amazon EMR 上の Apache Spark、Apache Hive、および YARN ベースのワークロードでサポートされています。詳細と開始方法については、Amazon EMR Managed Scaling の ユーザーガイドをご覧ください。",
       "siteName": "AWS What's New"
     },
     {
@@ -536,6 +592,14 @@
       "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/aws-datasync-scalability-performance-on-premises-file-transfers",
       "pubDate": "2025-12-12T15:00:00.000Z",
       "contentSnippet": "AWS DataSync の拡張モードは、オンプレミスのファイルサーバーと Amazon S3 の間のデータ転送をサポートするようになりました。これにより、お客様は DataSync 基本モードよりも高いパフォーマンスで、事実上無制限のファイル数までスケールするデータセットを転送できます。\n  AWS DataSync は、ネットワーク上のデータ移動を最適化する安全で高速なファイル転送サービスです。拡張モードでは、並列処理を使用してあらゆるサイズのデータセットのパフォーマンスとスケーラビリティを向上させながら、ファイル数の制限を排除し、詳細な転送メトリクスを提供することでモニタリングと管理を強化します。これまでは、Amazon S3 ロケーション間のデータ転送とマルチクラウド転送に拡張モードを使用できました。今回の発表により、拡張モードの機能が拡張され、オンプレミスの NFS または SMB ファイルサーバーと Amazon S3 間の転送がサポートされるようになりました。拡張モードを使用すると、お客様はトレーニングデータセットを AWS に迅速に移動することで生成 AI ワークロードを加速し、オンプレミスのデータをクラウドベースのパイプラインと同期することでデータレイク分析を強化し、アーカイブとクラウドモダナイズのための大規模な移行を推進できます。\n  この新しい機能は、AWS DataSync が提供されているすべての AWS リージョンでご利用いただけます。使用を開始するには、AWS DataSync コンソールにアクセスしてください。詳細については、AWS DataSync のドキュメントをご覧ください。",
+      "siteName": "AWS What's New"
+    },
+    {
+      "id": "eb5f6ebbf5180c5b97a71895d5efe062be3c29d3",
+      "title": "Amazon MSK Replicator がさらに 10 の AWS リージョンで利用可能に",
+      "link": "https://aws.amazon.com/jp/about-aws/whats-new/2025/12/amazon-msk-replicator-additional-aws-regions",
+      "pubDate": "2025-12-12T15:00:00.000Z",
+      "contentSnippet": "Amazon MSK Replicator を使用した Amazon Managed Streaming for Apache Kafka (Amazon MSK) クラスター全体でのストリーミングデータのレプリケートが、以下のさらに 10 の AWS リージョンで利用できるようになりました: 中東 (バーレーン)、中東 (UAE)、アジアパシフィック (ジャカルタ)、アジアパシフィック (香港)、アジアパシフィック (大阪)、アジアパシフィック (メルボルン)、アフリカ (ケープタウン)、欧州 (ミラノ)、欧州 (チューリッヒ)、イスラエル (テルアビブ)。\n  MSK Replicator は Amazon MSK の機能で、数回クリックするだけで、異なる、または同じ AWS リージョンにある Amazon MSK クラスター間でデータを確実にレプリケートできます。MSK Replicator を使用すると、リージョンでの耐障害性に優れたストリーミングアプリケーションを簡単に構築し、可用性とビジネス継続性を向上させることができます。MSK Replicator では MSK クラスター間の自動非同期レプリケーションを実現できるため、カスタムコードの記述、インフラストラクチャの管理、クロスリージョンのネットワーク設定が不要になります。MSK Replicator は基盤となるリソースを自動的にスケールするため、容量をモニタリングまたは拡張しなくてもオンデマンドでデータをレプリケートできます。MSK Replicator では、トピック構成、アクセスコントロールリスト (ACL)、コンシューマーグループのオフセットなど、必要な Kafka メタデータもレプリケートされます。あるリージョンで予期しないイベントが発生した場合は、他の AWS リージョンにフェイルオーバーして、シームレスに処理を再開できます。\n  Amazon MSK コンソールまたは Amazon CLI から MSK Replicator の利用を開始できます。今回のリリースにより、MSK Replicator は 35 の AWS リージョンで利用できるようになりました。詳細については、MSK Replicator のドキュメント、製品ページ、価格ページをご覧ください。",
       "siteName": "AWS What's New"
     },
     {
@@ -1315,5 +1379,5 @@
       "siteName": "AWS What's New"
     }
   ],
-  "lastUpdated": "2026-01-03T06:20:49.624Z"
+  "lastUpdated": "2026-01-03T09:14:06.616Z"
 }
